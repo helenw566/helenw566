@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | PPOL 5206 Portfolio</title>
+    <style>
+        /* ============================================
+           PPOL 5206 GitHub Pages Template
+           
+           INSTRUCTIONS FOR STUDENTS:
+           1. Replace all [PLACEHOLDER] text with your information
+           2. Update colors in the :root section if desired
+           3. Add your photo (see instructions below)
+           4. Add projects as you complete labs
+           ============================================ */
+        
+        :root {
+            /* Georgetown colors - feel free to customize */
+            --primary-color: #041E42;      /* Georgetown Blue */
+            --secondary-color: #63666A;    /* Gray */
+            --accent-color: #0076A8;       /* Light Blue */
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+            /* 
+            INSTRUCTIONS FOR ADDING YOUR PHOTO:
+            Option 1: Add a file called "profile.jpg" to your repository
+                      and change src below to: src="profile.jpg"
+            Option 2: Use a URL to a photo hosted elsewhere
+            Option 3: Use the placeholder service (shown by default)
+            */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        /* About Section */
+        .about-content {
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Skills/Interests List */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Placeholder for future projects */
+        .coming-soon {
+            background: var(--card-background);
+            border: 2px dashed var(--secondary-color);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px 20px;
+            background: var(--background-color);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER SECTION
+         Update with your name and program
+         ============================================ -->
+    <header>
+        <!-- 
+        TO ADD YOUR PHOTO:
+        1. Add a file called "profile.jpg" to your repository
+        2. Change the src below to: src="profile.jpg"
+        
+        Or use a URL to a photo hosted elsewhere
+        -->
+        <img src="profile.jpg" alt="Your photo" class="profile-photo">
+        
+        <h1>HELEN WANG</h1>
+        <p>MS in Data Science for Public Policy | Georgetown University</p>
+        <p>BA in Psychology | Princeton University</p>
+    </header>
+
+    <!-- ============================================
+         NAVIGATION
+         Links to sections on this page
+         ============================================ -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ============================================
+             ABOUT SECTION
+             Tell visitors about yourself
+             ============================================ -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    Hello! My name is Helen and I am a second-year Master’s student at 
+                    Georgetown University’s Data Science for Public Policy program. As a 
+                    first-generation, low-income student, I’ve always been passionate about
+                    understanding how adversity and systemic inequities shape people’s 
+                    decision-making, relationships, and long-term success. My background in
+                    psychology along with over 7+ years of experience in social science 
+                    research—including work at the NIH on health disparities and social 
+                    networks—has shown me how evidence and data can drive meaningful social 
+                    change. My time at Georgetown has only strengthened my commitment and 
+                    refined my computational skillset.  
+                
+                    
+                </p>
+                <p>
+                    As a Data Scientist, I hope to leverage quantitative research and data 
+                    analysis to address socioeconomic inequities and advance social justice.
+                </p>
+
+                <!-- Skills/Interests Tags - Add or remove as needed -->
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Social Policy</span>
+                    <span class="skill-tag">Health Policy</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PROJECTS SECTION
+             Add projects as you complete course labs
+             ============================================ -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>NYPD Misconduct</h3>
+                        <p>Leveraged Supervised Machine Learning to (1) predict case and penalty outcomes for NYPD misconduct cases and (2) identify strongest predictors.</p>
+                        <a class="project-link" href="https://github.com/helenw566/nypd_misconduct" target="_blank">
+                          Github Link &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>DEI Legislation</h3>
+                        <p>
+                          Employed structural topic modeling to evaluate topic prevalence and content in DEI 
+                          legislation and conducted network analysis of cosponsorship networks.
+                        </p>
+                        <a class="project-link" href="https://github.com/helenw566/dei_legislation" target="_blank">
+                          Github Link &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>SHSAT Sentiments</h3>
+                        <p>Conducted Diachronic Semantic Analysis and Stance Detection across newspaper headlines revolving around NYC's SHSAT</p>
+                        <a class="project-link" href="https://github.com/helenw566/shsat_sentiments" target="_blank">
+                          Github Link &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Placeholder for more projects -->
+                <div class="coming-soon">
+                    <p>More projects coming soon as the semester progresses!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             CONTACT SECTION
+             Add your professional contact links
+             ============================================ -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-links">
+                    <!-- Update these with your actual links -->
+                    <a href="mailto:[YOUR-NETID]@georgetown.edu">
+                        &#128231; hw566@georgetown.edu
+                    </a>
+                    <a href="https://github.com/helenw566" target="_blank">
+                        &#128187; GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/helen-w-735783163/" target="_blank">
+                        &#128188; LinkedIn
+                    </a>
+                    <!-- Add or remove contact methods as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <p>
+            Data Science for Public Policy | 
+            <a href="https://mccourt.georgetown.edu">McCourt School of Public Policy</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+            Last updated: January 2025
+        </p>
+    </footer>
+</body>
+</html>
