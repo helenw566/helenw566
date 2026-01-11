@@ -1,16 +1,18 @@
-## Hi there 👋
+# Hi, I'm Helen 👋
 
-<!--
-**helenw566/helenw566** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a second-year Master’s student at Georgetown University’s Data Science for 
+Public Policy program. I'm passionate about using data science and research 
+to advance social justice and address systemic inequities!
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🌱 Skills
+R | Python | SQL 
+
+---
+
+## 📫 Contact Me
+- Email: hw566@georgetown.edu OR helenw.c22@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/helen-w-735783163/)
+- [Portfolio](https://helenw566.github.io/helenw566/)
+
