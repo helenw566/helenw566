@@ -14,5 +14,5 @@ R | Python | SQL
 ## 📫 Contact Me
 - Email: hw566@georgetown.edu OR helenw.c22@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/helen-w-735783163/)
-- [Portfolio](https://helenw566.github.io/helenw566/)
+- [Portfolio](https://helenw566.github.io/portfolio/)
 
